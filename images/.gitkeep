@@ -1,0 +1,16 @@
+Placeholder to create the images/ directory for setup screenshots.
+
+Add your screenshots to this folder (recommended names):
+- 1_prerequisitos.png
+- 2_clonar_repo.png
+- 3_readme.png
+- 4_docker_compose.png
+- 5_npm_install.png
+- 6_api_health.png
+- 6_example_flow.png
+- 7_tests.png
+- 8_build.png
+- 9_docker_build.png
+- 9_docker_browser.png
+
+Note: Do not commit any real secrets or .env values in screenshots. If images contain secrets, blur them before uploading.
