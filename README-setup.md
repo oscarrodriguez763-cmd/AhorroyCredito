@@ -16,18 +16,18 @@ Resumen rápido de comandos (ejecutar desde la raíz del repo):
   - `node -v && npm -v && git --version`
   - `docker --version && docker compose version`
 
-![Pre-requisitos](images/1_prerequisitos.png)
+![Pre-requisitos](images/1_prerequisitos.svg)
 
 2) Clonar (si no lo tienes)
 - `git clone https://github.com/oscarrodriguez763-cmd/AhorroyCredito.git`
 - `cd AhorroyCredito`
 
-![Clonar repo](images/2_clonar_repo.png)
+![Clonar repo](images/2_clonar_repo.svg)
 
 3) Revisar el README del repo
 - Abre `README.md` y comprueba instrucciones específicas. (Ya incluye pasos con docker-compose y prisma.)
 
-![README del repo](images/3_readme.png)
+![README del repo](images/3_readme.svg)
 
 4) Levantar con Docker (recomendado para reproducibilidad)
 - `docker compose up --build`
@@ -35,7 +35,7 @@ Resumen rápido de comandos (ejecutar desde la raíz del repo):
 - Espera hasta ver logs que indiquen que el backend está corriendo en el puerto 4000.
 - Capturas recomendadas: salida del docker compose y `docker ps` mostrando contenedores.
 
-![Docker Compose levantado](images/4_docker_compose.png)
+![Docker Compose levantado](images/4_docker_compose.svg)
 
 5) Alternativa — Ejecutar backend local (sin Docker)
 - `cd backend`
@@ -51,30 +51,30 @@ Resumen rápido de comandos (ejecutar desde la raíz del repo):
 - Levantar en modo desarrollo:
   - `npm run dev`
 
-![Instalación de dependencias](images/5_npm_install.png)
+![Instalación de dependencias](images/5_npm_install.svg)
 
 6) Comprobar endpoints
 - Health:
   - `curl http://localhost:4000/api/health`
 - Registro / Login: usar Postman o curl para `POST /api/auth/register` y `POST /api/auth/login`.
 
-![Health check API](images/6_api_health.png)
+![Health check API](images/6_api_health.svg)
 
 Ejemplo de flujo (registro/login, crear cuenta, depositar):
 
-![Flujo de ejemplo](images/6_example_flow.png)
+![Flujo de ejemplo](images/6_example_flow.svg)
 
 7) Ejecutar tests (si los hay)
 - Desde `backend`: `npm test`
 
-![Resultados de tests](images/7_tests.png)
+![Resultados de tests](images/7_tests.svg)
 
 8) Build para producción
 - `cd backend`
 - `npm run build`
 - `npm start`
 
-![Build y run producción](images/8_build.png)
+![Build y run producción](images/8_build.svg)
 
 9) Docker (opción avanzada)
 - Si prefieres usar Docker para todo:
@@ -83,9 +83,9 @@ Ejemplo de flujo (registro/login, crear cuenta, depositar):
 - Para recrear y limpiar volúmenes:
   - `docker compose down -v`
 
-![Docker build](images/9_docker_build.png)
+![Docker build](images/9_docker_build.svg)
 
-![App en navegador desde Docker](images/9_docker_browser.png)
+![App en navegador desde Docker](images/9_docker_browser.svg)
 
 10) Añadir capturas al repo
 - La carpeta `images/` existe y contiene un `.gitkeep` como placeholder. Sube tus capturas usando los nombres exactos indicados arriba para que se muestren correctamente en este README.
@@ -99,9 +99,9 @@ Ejemplo de flujo (registro/login, crear cuenta, depositar):
 - Permisos al correr Prisma: si Prisma falla, borra `node_modules` y ejecuta `npm ci`.
 
 Qué hice ahora
-- He integrado los marcadores de imagen directamente en `README-setup.md`. Cuando subas las capturas con los nombres indicados, aparecerán en el documento.
+- He integrado los marcadores de imagen directamente en `README-setup.md` y apuntan a archivos SVG en images/.
 
 Siguientes pasos (elige una)
-- 1) Sube las capturas y yo confirmo la integración final.
+- 1) Sube las capturas reales y yo las reemplazo por imágenes reales.
 - 2) Quieres que añada este contenido al `README.md` principal además de `README-setup.md` (dímelo y lo hago).
 - 3) Prefieres que abra una rama y un PR con estos cambios para revisar antes de mergear (recomendado).
